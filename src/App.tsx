@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { TrendingUp, Wallet, Newspaper, Menu, X, LogOut } from 'lucide-react';
 import InvestmentSimulator from './components/InvestmentSimulator';
-import PortfolioTracking from './components/PortfolioTracking';
-import NewsFeed from './components/NewsFeed';
+// import PortfolioTracking from './components/PortfolioTracking';
+// import NewsFeed from './components/NewsFeed';
 // import Auth from './components/Auth';
 import { supabase } from './lib/supabase';
 import { Session } from '@supabase/supabase-js';
@@ -44,8 +44,8 @@ function App() {
 
   const tabs = [
     { id: 'simulator' as Tab, label: 'Investment Simulator', icon: TrendingUp },
-    { id: 'portfolio' as Tab, label: 'Portfolio Tracking', icon: Wallet },
-    { id: 'news' as Tab, label: 'News Feed', icon: Newspaper },
+    // { id: 'portfolio' as Tab, label: 'Portfolio Tracking', icon: Wallet },
+    // { id: 'news' as Tab, label: 'News Feed', icon: Newspaper },
   ];
 
   if (loading) {
@@ -148,8 +148,8 @@ function App() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {activeTab === 'simulator' && <InvestmentSimulator />}
-        {activeTab === 'portfolio' && <PortfolioTracking />}
-        {activeTab === 'news' && <NewsFeed />}
+        {/* {activeTab === 'portfolio' && <PortfolioTracking />}
+        {activeTab === 'news' && <NewsFeed />} */}
       </main>
 
       <footer className="bg-white border-t border-gray-200 mt-12">
